@@ -1,5 +1,9 @@
 <%= form_with model: post, local:true do |f| %>
-    <div class="form-group">
+  <div class="form-group">
+    <%= f.label :画像 %>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
+  <div class="form-group">
     <%= f.label :エリア %>
     <%= f.select :area, ['宮崎市', '日向市', '日南市', '串間市', '高鍋町', '佐土原町', '川南町', '延岡市'],{}, class: "form-control custom-select", rows: "1" %>
   </div>
