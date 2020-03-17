@@ -11,13 +11,13 @@
       <div class="col-lg-5">
         <%= @post.created_at.strftime("%Y-%m-%d %H:%M") %>
         <div class="card-body scroll">
-          <%= simple_format (@post.area) %>
+          <p>エリア：<%= @post.area %></p>
         </div>
         <div class="card-body scroll">
-          <%= simple_format (@post.point) %>
+          <p>ポイント名：<%= @post.point %></p>
         </div>
         <div class="card-body scroll">
-          <%= simple_format (@post.caption) %>
+          <p>波情報<%= simple_format (@post.caption) %></p>
         </div>
       </div>
     </div>
