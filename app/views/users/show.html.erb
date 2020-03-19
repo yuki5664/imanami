@@ -1,0 +1,22 @@
+
+<div class="col-lg-8 mx-auto">
+  <div class="row pb-5">
+    <div class="col-4 text-center">
+      <%= image_tag @user.avatar.variant(resize_to_fill: [150, 150]).processed, class: "img-thumbnail rounded-circle" %>
+    </div>
+    <div class="col-8">
+      <h1><%= @user.username %></h1>
+      <%= @user.description %>
+      <% if @user.id == current_user.id %>
+        <p><%= link_to t(".edit"), edit_user_registration_path(@user) %></p>
+      <% end %>
+    </div>
+  </div>
+  <div class="post">
+    <div class="row">
+      <%= render partial: "users/post", collection: @posts %>
+      <%= paginate @posts %>
+    </div>
+  </div>
+</div>
+
