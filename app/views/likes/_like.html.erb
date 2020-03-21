@@ -1,3 +1,4 @@
+<div class="like-box">
 <% if !user_signed_in? %>
   <div class="unlike"><i class="far fa-smile"></i></div>
 <% elsif current_user.likes.find_by(post_id: post.id) %>
@@ -10,3 +11,4 @@
   <% end %>
 <% end %>
 <%= post.likes.count %>
+</div>
