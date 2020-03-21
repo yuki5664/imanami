@@ -1,9 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-primary nav-fill sticky-top  mb-3">
+<nav class="navbar navbar-expand-lg navbar-light bg-primary nav-fill sticky-top header mb-3">
 
   <%# ロゴ部分 %>
   <div class="nav-item">
-    <a class="navbar-brand text-light logo" href="/"><img src="/assets/imanami_logo" alt="" width="65" height="65" class="fa-spin">
-&nbsp; Imanami</a>
+    <a class="navbar-brand text-light logo" href="/"><img src="/assets/imanami_logo" alt="" width="65" height="65"></a>
   </div>
 
   <%# メニュー格納時のボタン %>
@@ -16,15 +15,24 @@
     <form class="nav-item form-inline mb-2 mb-lg-0" action="/" accept-charset="UTF-8" method="get">
       <input type="text" name="q" id="q" value="" class="form-control" placeholder="検索" >
     </form>
-    <% if user_signed_in? %>
-      <%= link_to user_path(current_user), class: "nav-item text-light" do %>
-        <i class="far fa-user"></i>
-      <% end %>
-    <% else %>
-      <%= link_to new_user_session_path, class: "nav-item" do %>
-        <i class="far fa-user"></i>
-      <% end %>
-    <% end %>
+    <ul class="nav mr-5 pr-5">
+      <li class="nav-item">
+        <%= link_to new_post_path, class: "nav-link" do %>
+          <img src="/assets/imanami_new" alt="" width="65" height="65">
+        <% end %>
+      </li>
+      <li>
+        <% if user_signed_in? %>
+          <%= link_to user_path(current_user), class: "nav-item" do %>
+            <img src="/assets/imanami_user" alt="" width="65" height="65">
+          <% end %>
+        <% else %>
+          <%= link_to new_user_session_path, class: "nav-item" do %>
+            <img src="/assets/imanami_user" alt="" width="65" height="65">
+          <% end %>
+        <% end %>
+      </li>
+    </ul>
   </div>
 
 </nav>
