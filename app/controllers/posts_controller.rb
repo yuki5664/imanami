@@ -3,7 +3,8 @@ class PostsController < ApplicationController
   before_action :set_post, only: [ :show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.order(created_at: :desc).page(params[:page]).per(5)
+    @q = Post.ransack(params[:q])
+    @posts = @q.result.find_newest_post(params[:page])
   end
 
   def new
