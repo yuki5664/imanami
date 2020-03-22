@@ -3,12 +3,16 @@
     <div class="col-4 text-center">
       <%= image_tag @user.avatar.variant(resize_to_fill: [150, 150]).processed, class: "img-thumbnail rounded-circle" %>
     </div>
-    <div class="col-8">
+    <div class="col-5">
       <h1><%= @user.username %></h1>
       <%= @user.description %>
       <% if @user.id == current_user.id %>
-        <p><%= link_to t(".edit"), edit_user_registration_path(@user) %></p>
+        <p><%= link_to "編集", edit_user_registration_path(@user) %></p>
       <% end %>
+    </div>
+    <div class="col-3">
+      <%= render 'follow_form' %>
+      <%= render 'stats' %>
     </div>
   </div>
   <div class="post">
@@ -19,8 +23,7 @@
   </div>
 </div>
 
-<%= render 'follow_form' %>
-<%= render 'stats' %>
+
 
 <script>
   $(window).on('scroll', function() {

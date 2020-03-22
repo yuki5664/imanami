@@ -7,15 +7,18 @@
         <% else %>
           <%= image_tag "no_image", class: "card-img" %>
         <% end %>
-      </div>
-        <div class="card-body">
+      </div>      
+      <div class="card-body">
+        <%= link_to user_path(@post.user) do %>
           <% if @post.user.avatar.attached? %>
             <%= image_tag @post.user.avatar.variant(resize_to_fill: [32, 32]).processed, class: "img-thumbnail rounded-circle" %>
           <% else %>
             <%= image_tag "no_image", class: "img-thumbnail rounded-circle" %>
           <% end %>
           <%= @post.user.name %>
-          <hr>
+        <% end %>
+      </div>     
+        <hr>
       <div class="col-lg-12">
         <p>日時</p>
         <div class="card-body border">

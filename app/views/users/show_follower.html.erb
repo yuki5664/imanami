@@ -1,9 +1,11 @@
 <% @user.followers.each do |user| %>
+<div class="card col-4">
 <table>
 <tr>
-  <td>  <%= user.username %> </td>
-  <td><%= link_to '詳細', user_path(user) %></td>
+  <td> <%= image_tag user.avatar.variant(resize_to_fill: [32, 32]).processed, class: "img-fluid rounded-circle" %> </td>
+  <td> <%= user.username %> </td>
+  <td> <%= link_to '詳細', user_path(user) %></td>
 </tr>
-
 </table>
+</div>
 <% end %>
