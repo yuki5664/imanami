@@ -27,7 +27,7 @@ class User < ApplicationRecord
   validates :username,      presence: true,   length: { maximum: 30 },   uniqueness: true
   validates :area,          presence: true,   length: { maximum: 30 }
   validates :description,   presence: true,   length: { maximum: 500 }
-  validate :avatar_check
+  validate :avatar_check”
   def avatar_check
     if avatar.present?
       unless avatar.content_type.in?(%(image/jpeg image/png))
