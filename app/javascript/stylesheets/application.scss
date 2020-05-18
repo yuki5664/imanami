@@ -1,1 +1,54 @@
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+
+.logo {
+  font-family: 'Rollcake-vmAqE', cursive;
+  font-size: 2rem;
+}
+
+.scroll {
+  overflow: scroll;
+  max-height: 490px;
+}
+
+nav.pagination {
+  display: none;
+}
+
+.like-box {
+  display: flex;
+}
+
+.like {
+  color: red;
+  text-decoration: none;
+  display: inline;
+}
+
+.unlike {
+  color: gray;
+  text-decoration: none;
+  display: inline;
+}
+
+.header  {
+  background-color: white!important;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.fav {
+  color: gray;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.fav:hover {
+  opacity: 0.5;
+}
+
+.logo_fav:hover {
+  opacity: 0.5;
+}
