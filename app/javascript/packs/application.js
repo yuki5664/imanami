@@ -19,5 +19,6 @@ require("custom/jquery.jscroll.min")
 // const imagePath = (name) => images(name, true)
 
   import 'bootstrap'
+  import "../stylesheets/application"
   import '../scss/application.scss'
   import "@fortawesome/fontawesome-free/js/all"
