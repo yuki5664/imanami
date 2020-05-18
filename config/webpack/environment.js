@@ -11,7 +11,6 @@ environment.plugins.append('Provide', new webpack.ProvidePlugin({
 
 module.exports = environment
 
-const webpack = require('webpack')
 
 environment.plugins.prepend('Provide',
   new webpack.ProvidePlugin({
