@@ -49,7 +49,4 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: imanami_production
-  username: imanami
-  password: <%= ENV['IMANAMI_DATABASE_PASSWORD'] %>
+  adapter: postgresql
