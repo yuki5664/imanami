@@ -2,7 +2,7 @@
 
   <%# ロゴ部分 %>
   <div class="nav-item">
-    <a class="navbar-brand text-light logo logo_fav" href="/"><img src="assets/imanami_logo" alt="" width="65" height="65"></a>
+    <%= link_to image_tag("imanami_logo", alt: "Hirogeuta logo",  width: "65px"), root_path %>
   </div>
 
   <%# メニュー格納時のボタン %>
@@ -35,5 +35,4 @@
       </li>
     </ul>
   </div>
-
 </nav>

@@ -18,3 +18,7 @@ environment.plugins.prepend('Provide',
     jQuery: 'jquery/src/jquery'
   })
 )
+
+const file = require('./loaders/file')
+environment.loaders.append('file', file)
+
