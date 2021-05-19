@@ -9,7 +9,7 @@ gem 'aws-sdk-s3',              '1.46.0', require: false
 # Use mysql as the database for Active Record
 
 # Use Puma as the app server
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
